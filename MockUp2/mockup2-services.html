@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services – True Link Vivah</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ivory:#FFFBF3; --blush:#F9E8D8; --amber-light:#FFB641; --amber-pale:#F7D38C; --amber:#E8A030; --amber-pale-light:#FFF3D6; --gold:#C9882A; --sage:#C8D8C0; --text:#3A2015; --text-soft:#6B4030; --white:#FFFFFF; --border-soft:#F0D4B8; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Nunito',sans-serif; background:var(--ivory); color:var(--text); font-size:17px; line-height:1.75; }
+  nav { background:var(--white); padding:0 50px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:100; box-shadow:0 2px 20px rgba(200,100,80,0.08); border-bottom:3px solid var(--amber-pale); }
+  .logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 0;
+  }
+
+  .logo-flower {
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  .logo-text .name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--amber);
+    display: block;
+    line-height: 1;
+  }
+
+  .logo-text .sub {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    color: var(--amber);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  .logo-link { display:flex; align-items:center; text-decoration:none; }
+  .logo-img { height:56px; width:auto; }
+  .footer-logo-link { display:inline-block; text-decoration:none; }
+  .footer-logo-img { height:40px; width:auto; }
+  .nav-links { display:flex; gap:30px; list-style:none; align-items:center; }
+  .nav-links a { font-size:16px; font-weight:600; color:var(--text-soft); text-decoration:none; transition:color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color:var(--amber); }
+  .nav-pill { background:var(--amber); color:white !important; padding:12px 28px; border-radius:50px; }
+
+  .page-hero { background:linear-gradient(160deg,var(--amber-pale),var(--amber-pale),var(--blush)); padding:70px 60px; position:relative; overflow:hidden; }
+  .page-hero::before { content:'🌺'; position:absolute; top:20px;right:40px; font-size:120px; opacity:0.1; }
+  .breadcrumb { font-size:14px; color:var(--text-soft); margin-bottom:16px; font-weight:600; }
+  .breadcrumb a { color:var(--amber); text-decoration:none; }
+  .page-hero h1 { font-family:'Cormorant Garamond',serif; font-size:56px; font-weight:600; line-height:1.15; margin-bottom:16px; }
+  .page-hero h1 em { color:var(--amber); font-style:italic; }
+  .page-hero p { font-size:20px; color:var(--text-soft); max-width:560px; }
+
+  .btn-rose { background:var(--amber); color:white; padding:15px 38px; border-radius:50px; font-size:17px; font-weight:700; text-decoration:none; display:inline-block; transition:all 0.25s; box-shadow:0 6px 20px rgba(217,96,122,0.25); font-family:'Nunito',sans-serif; }
+  .btn-rose:hover { background:#B84060; transform:translateY(-2px); }
+
+  /* SERVICE DETAIL */
+  .svc-detail-sec { padding:80px 60px; background:white; }
+  .svc-item { display:grid; grid-template-columns:1.2fr 1fr; gap:60px; align-items:start; padding:60px 0; border-bottom:1.5px solid var(--border-soft); max-width:1100px; margin:0 auto; }
+  .svc-item:last-child { border-bottom:none; }
+  .svc-item:nth-child(even) { direction:rtl; }
+  .svc-item:nth-child(even) > * { direction:ltr; }
+  .svc-num { font-family:'Cormorant Garamond',serif; font-size:72px; font-weight:600; color:var(--amber-pale); line-height:1; display:block; margin-bottom:8px; }
+  .svc-item-label { font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:var(--amber); font-weight:700; margin-bottom:10px; display:block; }
+  .svc-item h2 { font-family:'Cormorant Garamond',serif; font-size:36px; font-weight:600; line-height:1.2; margin-bottom:18px; }
+  .svc-item h2 em { color:var(--amber); font-style:italic; }
+  .svc-item p { color:var(--text-soft); font-size:18px; line-height:1.8; margin-bottom:16px; }
+  .svc-panel-card { background:var(--ivory); border-radius:20px; padding:32px; border:1.5px solid var(--border-soft); }
+  .svc-panel-card h4 { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; margin-bottom:16px; color:var(--text); }
+  .svc-panel-list { list-style:none; }
+  .svc-panel-list li { padding:10px 0; border-bottom:1px solid var(--border-soft); font-size:16px; color:var(--text-soft); display:flex; gap:10px; align-items:flex-start; }
+  .svc-panel-list li::before { content:'🌸'; font-size:12px; flex-shrink:0; margin-top:3px; }
+  .svc-panel-list li:last-child { border-bottom:none; }
+
+  /* PACKAGES */
+  .packages { padding:80px 60px; background:linear-gradient(160deg,var(--blush),var(--amber-pale)); }
+  .packages h2 { font-family:'Cormorant Garamond',serif; font-size:44px; font-weight:600; text-align:center; margin-bottom:8px; }
+  .packages h2 em { color:var(--amber); font-style:italic; }
+  .pkg-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; max-width:1000px; margin:56px auto 0; }
+  .pkg-card { background:white; border-radius:24px; padding:40px 28px; text-align:center; border:1.5px solid var(--border-soft); transition:transform 0.25s,box-shadow 0.25s; position:relative; }
+  .pkg-card:hover { transform:translateY(-6px); box-shadow:0 16px 36px rgba(217,96,122,0.12); }
+  .pkg-card.featured { background:linear-gradient(135deg,var(--amber),var(--amber)); color:white; border:none; }
+  .pkg-card.featured .pkg-price { color:white; }
+  .pkg-card.featured .pkg-period { color:rgba(255,255,255,0.8); }
+  .pkg-card.featured .pkg-feat { border-bottom-color:rgba(255,255,255,0.2); color:rgba(255,255,255,0.9); }
+  .pkg-card.featured .pkg-name { color:rgba(255,255,255,0.9); }
+  .pkg-badge { position:absolute; top:-14px; left:50%; transform:translateX(-50%); background:var(--amber); color:white; font-size:12px; font-weight:700; padding:5px 20px; border-radius:50px; white-space:nowrap; }
+  .pkg-name { font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:600; margin-bottom:4px; }
+  .pkg-price { font-family:'Cormorant Garamond',serif; font-size:52px; font-weight:600; color:var(--amber); line-height:1; margin:16px 0 4px; }
+  .pkg-period { font-size:14px; color:var(--text-soft); margin-bottom:24px; font-weight:600; }
+  .pkg-feats { list-style:none; margin-bottom:28px; text-align:left; }
+  .pkg-feat { padding:10px 0; border-bottom:1px solid var(--border-soft); font-size:16px; color:var(--text-soft); display:flex; align-items:center; gap:10px; }
+  .pkg-feat::before { content:'✓'; color:var(--amber); font-weight:700; font-size:16px; }
+  .pkg-card.featured .pkg-feat::before { color:rgba(255,255,255,0.9); }
+  .pkg-btn { background:var(--amber); color:white; border:none; padding:14px 0; font-family:'Nunito',sans-serif; font-size:16px; font-weight:700; cursor:pointer; width:100%; border-radius:50px; text-decoration:none; display:block; transition:background 0.2s; }
+  .pkg-btn:hover { background:#B84060; }
+  .pkg-card.featured .pkg-btn { background:white; color:var(--amber); }
+
+  /* CTA */
+  .cta-banner { background:linear-gradient(135deg,var(--amber),var(--amber-light)); padding:80px 60px; text-align:center; }
+  .cta-banner h2 { font-family:'Cormorant Garamond',serif; font-size:48px; font-weight:600; color:white; margin-bottom:14px; }
+  .cta-banner p { font-size:20px; color:rgba(255,255,255,0.88); margin-bottom:32px; max-width:520px; margin-left:auto; margin-right:auto; }
+  .btn-white-pill { background:white; color:var(--amber); padding:18px 48px; border-radius:50px; font-size:19px; font-weight:700; text-decoration:none; display:inline-block; transition:all 0.25s; font-family:'Nunito',sans-serif; }
+  .btn-white-pill:hover { transform:translateY(-3px); }
+
+  footer { background:#3A1A10; padding:60px 60px 28px; color:#C8A090; }
+  .footer-logo-img { height:70px; width:auto; }
+  .footer-top { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; margin-bottom:36px; padding-bottom:36px; border-bottom:1px solid #5A3028; }
+  .footer-brand-name { font-family:'Cormorant Garamond',serif; font-size:28px; color:#FFF3D6; font-weight:600; margin-bottom:12px; }
+  .footer-col-title { font-size:15px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#FFF3D6; margin-bottom:16px; }
+  .footer-col ul { list-style:none; }
+  .footer-col ul li { margin-bottom:10px; }
+  .footer-col ul li a { color:#A07868; text-decoration:none; font-size:16px; }
+  .footer-col ul li a:hover { color:#FFF3D6; }
+  .footer-bottom { text-align:center; font-size:14px; color:#6A4838; }
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo-wrap">
+    <div class="logo-img"><img src='../TrueLink Logo.png' height="56px"></div>
+    <span class="name logo-link"><img src='../TrueLink Name.png' height='56px'></span>
+    <div class="logo-text">
+      <span class="sub">Trusted · Compassionate · Timeless</span>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="mockup2-floral-garden.html">Home</a></li>
+    <li><a href="mockup2-about.html">About</a></li>
+    <li><a href="mockup2-services.html" class="active">Our Services</a></li>
+    <li><a href="mockup2-success-stories.html">Success Stories</a></li>
+    <li><a href="mockup2-contact.html">Contact</a></li>
+    <li><a href="mockup2-contact.html" class="nav-pill">Register Now</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="mockup2-floral-garden.html">Home</a> › Our Services</div>
+  <h1>Everything You Need,<br>Wrapped in <em>Care & Warmth</em></h1>
+  <p>We don't just find matches — we hold your hand through every beautiful step of the journey, with services designed around your family's unique needs.</p>
+</div>
+
+<section class="svc-detail-sec">
+  <div class="svc-item">
+    <div>
+      <span class="svc-num">01</span>
+      <span class="svc-item-label">Our Core Service</span>
+      <h2>Personal <em>Matchmaking</em></h2>
+      <p>At True Link Vivah, every match begins with a human conversation — not a click or a filter. Your dedicated counsellor listens to your full story before recommending a single profile, ensuring each suggestion is thoughtfully aligned with your values, traditions, and hopes.</p>
+      <p>We take the time to understand not just what you are looking for, but who you are — so every match feels right, not just on paper, but in your heart.</p>
+      <a href="mockup2-contact.html" class="btn-rose">Begin Your Journey →</a>
+    </div>
+    <div class="svc-panel-card">
+      <h4>What's Included</h4>
+      <ul class="svc-panel-list">
+        <li>One-on-one consultation with a dedicated counsellor</li>
+        <li>Detailed compatibility and temperament assessment</li>
+        <li>Personally hand-picked profiles — no algorithm</li>
+        <li>Guided introduction and meeting support</li>
+        <li>Ongoing counsellor availability at every step</li>
+        <li>Regular follow-up and check-ins throughout</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="svc-item">
+    <div>
+      <span class="svc-num">02</span>
+      <span class="svc-item-label">Family Support</span>
+      <h2>Family Counselling<br>& <em>Mediation</em></h2>
+      <p>A marriage brings two families together — and our counsellors are skilled at making that coming-together a warm, joyful experience. We facilitate respectful conversations that bridge differences and help both families find shared ground.</p>
+      <p>Sessions can take place in our centre, over the phone, or in the comfort of your home — wherever your family is most at ease.</p>
+    </div>
+    <div class="svc-panel-card">
+      <h4>What's Included</h4>
+      <ul class="svc-panel-list">
+        <li>Individual sessions with each family separately</li>
+        <li>Joint facilitated meeting between families</li>
+        <li>Expectation alignment and dialogue mediation</li>
+        <li>Support for complex situations (remarriage, inter-community)</li>
+        <li>Available in-centre, by phone, or as home visit</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="svc-item">
+    <div>
+      <span class="svc-num">03</span>
+      <span class="svc-item-label">Tradition & Astrology</span>
+      <h2>Kundali &<em> Horoscope Matching</em></h2>
+      <p>We honour the astrological traditions that form the foundation of so many families' expectations. Our in-house certified Jyotish consultants provide detailed, careful Kundali compatibility analysis — and walk families through findings with patience and clarity.</p>
+    </div>
+    <div class="svc-panel-card">
+      <h4>What's Included</h4>
+      <ul class="svc-panel-list">
+        <li>Full Kundali chart preparation</li>
+        <li>36-point Guna Milan compatibility score</li>
+        <li>Dosha analysis with remedial suggestions</li>
+        <li>Detailed written compatibility report</li>
+        <li>Personal walkthrough session with the family</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="svc-item">
+    <div>
+      <span class="svc-num">04</span>
+      <span class="svc-item-label">At Your Doorstep</span>
+      <h2>Home Visit <em>Consultations</em></h2>
+      <p>We understand that many families — especially those with elder members or health constraints — find it easier to meet at home. Our Home Visit Programme brings the full warmth and expertise of a True Link Vivah consultation directly to your living room.</p>
+    </div>
+    <div class="svc-panel-card">
+      <h4>What's Included</h4>
+      <ul class="svc-panel-list">
+        <li>In-home consultation at your chosen time</li>
+        <li>Full session with a senior counsellor</li>
+        <li>Profile review and family discussion in privacy</li>
+        <li>Available across all our service cities</li>
+        <li>Included free within all service packages</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="svc-item">
+    <div>
+      <span class="svc-num">05</span>
+      <span class="svc-item-label">Preparing for the Future</span>
+      <h2>Pre-Marriage <em>Guidance</em></h2>
+      <p>The right match is only the beginning. Our pre-marriage counselling helps couples and families prepare thoughtfully for the beautiful transitions ahead — building communication skills, aligning practical expectations, and creating a strong foundation.</p>
+    </div>
+    <div class="svc-panel-card">
+      <h4>What's Included</h4>
+      <ul class="svc-panel-list">
+        <li>Individual sessions for the couple</li>
+        <li>Joint family preparation sessions</li>
+        <li>Communication and conflict resolution guidance</li>
+        <li>Practical life-planning discussion</li>
+        <li>Post-wedding counsellor availability</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="packages">
+  <p style="font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);font-weight:700;text-align:center;margin-bottom:12px">Service Packages</p>
+  <h2>Find the Package <em>Right for You</em></h2>
+  <div class="pkg-grid">
+    <div class="pkg-card">
+      <div class="pkg-name">Silver Blossom</div>
+      <div class="pkg-price">₹15,000</div>
+      <div class="pkg-period">3-Month Package</div>
+      <ul class="pkg-feats">
+        <li class="pkg-feat">Dedicated counsellor</li>
+        <li class="pkg-feat">Up to 10 curated profiles</li>
+        <li class="pkg-feat">Kundali matching (2 profiles)</li>
+        <li class="pkg-feat">Phone & office consultations</li>
+      </ul>
+      <a href="mockup2-contact.html" class="pkg-btn">Get Started</a>
+    </div>
+    <div class="pkg-card featured">
+      <div class="pkg-badge">Most Loved ❤️</div>
+      <div class="pkg-name">Golden Lotus</div>
+      <div class="pkg-price">₹28,000</div>
+      <div class="pkg-period">6-Month Package</div>
+      <ul class="pkg-feats">
+        <li class="pkg-feat">Senior dedicated counsellor</li>
+        <li class="pkg-feat">Unlimited curated profiles</li>
+        <li class="pkg-feat">Full Kundali matching</li>
+        <li class="pkg-feat">Home visit included</li>
+        <li class="pkg-feat">Family counselling sessions</li>
+        <li class="pkg-feat">Pre-marriage guidance</li>
+      </ul>
+      <a href="mockup2-contact.html" class="pkg-btn">Get Started</a>
+    </div>
+    <div class="pkg-card">
+      <div class="pkg-name">Rose Garden</div>
+      <div class="pkg-price">₹50,000</div>
+      <div class="pkg-period">12-Month Package</div>
+      <ul class="pkg-feats">
+        <li class="pkg-feat">Director-level counsellor</li>
+        <li class="pkg-feat">Cross-city profile access</li>
+        <li class="pkg-feat">Premium Jyotish analysis</li>
+        <li class="pkg-feat">Unlimited home visits</li>
+        <li class="pkg-feat">Full family support suite</li>
+      </ul>
+      <a href="mockup2-contact.html" class="pkg-btn">Get Started</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <h2>Not Sure Where to Begin?</h2>
+  <p>Call us or request a free consultation — we'll guide you gently to exactly the right level of care and support.</p>
+  <a href="mockup2-contact.html" class="btn-white-pill">Talk to a Counsellor 🌸</a>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div><a href="mockup2-floral-garden.html" class="footer-logo-link"><img src="../TrueLink.png" alt="True Link Vivah" class="footer-logo-img"></a><p style="color:#8A6858;font-size:16px;max-width:280px;line-height:1.75">Helping families across India find love, joy, and lifelong companionship with deep respect for tradition and the human heart.</p></div>
+    <div class="footer-col"><div class="footer-col-title">Services</div><ul><li><a href="mockup2-services.html">Personal Matchmaking</a></li><li><a href="mockup2-services.html">Horoscope Matching</a></li><li><a href="mockup2-services.html">Family Counselling</a></li></ul></div>
+    <div class="footer-col"><div class="footer-col-title">Company</div><ul><li><a href="mockup2-about.html">About Us</a></li><li><a href="mockup2-success-stories.html">Success Stories</a></li></ul></div>
+    <div class="footer-col"><div class="footer-col-title">Contact</div><ul><li><a href="tel:+919591471691">+91 95914 71691</a></li><li><a href="mailto:truelinkmatrimony@gmail.com">truelinkmatrimony@gmail.com</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">© 2024 True Link Vivah. All rights reserved. | Privacy Policy | Terms</div>
+</footer>
+</body>
+</html>

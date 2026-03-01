@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>True Link Vivah – Love Grown in Trust</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ivory: #FFFBF3;
+    --blush: #F9E8D8;
+    --amber-light: #FFB641;
+    --amber-pale: #F7D38C;
+    --amber: #E8A030;
+    --amber-pale-light: #FFF3D6;
+    --gold: #C9882A;
+    --sage: #C8D8C0;
+    --text: #3A2015;
+    --text-soft: #6B4030;
+    --white: #FFFFFF;
+    --border-soft: #F0D4B8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--ivory);
+    color: var(--text);
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--white);
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 20px rgba(200,100,80,0.08);
+    border-bottom: 3px solid var(--amber-pale);
+  }
+
+  .logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 0;
+  }
+
+  .logo-flower {
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  .logo-text .name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--amber);
+    display: block;
+    line-height: 1;
+  }
+
+  .logo-text .sub {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    color: var(--amber);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .logo-link { display:flex; align-items:center; text-decoration:none; }
+  .logo-img { height:56px; width:auto; }
+  .footer-logo-link { display:inline-block; text-decoration:none; }
+  .footer-logo-img { height:70px; width:auto; }
+
+  .nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    align-items: center;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-soft);
+    text-decoration: none;
+    transition: color 0.2s;
+    letter-spacing: 0.03em;
+  }
+
+  .nav-links a:hover { color: var(--amber); }
+
+  .nav-pill {
+    background: var(--amber);
+    color: white !important;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-size: 16px !important;
+  }
+
+  .nav-pill:hover { background: #B84060 !important; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(160deg, var(--amber-light) 0%, var(--amber-pale) 50%, var(--blush) 100%);
+    padding: 80px 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 88vh;
+  }
+
+  /* Floral decorative elements */
+  .hero::before {
+    content: '🌸';
+    position: absolute;
+    top: 30px; right: 30px;
+    font-size: 140px;
+    opacity: 0.12;
+    transform: rotate(25deg);
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '🌺';
+    position: absolute;
+    bottom: 30px; left: 20px;
+    font-size: 120px;
+    opacity: 0.1;
+    transform: rotate(-15deg);
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    border: 1.5px solid var(--rose-light);
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-size: 14px;
+    color: var(--amber);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 12px rgba(217,96,122,0.12);
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 62px;
+    line-height: 1.12;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 22px;
+  }
+
+  .hero h1 .highlight {
+    color: var(--amber);
+    font-style: italic;
+  }
+
+  .hero-desc {
+    font-size: 20px;
+    color: var(--text-soft);
+    margin-bottom: 38px;
+    max-width: 460px;
+    font-weight: 400;
+    line-height: 1.8;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 44px;
+  }
+
+  .btn-rose {
+    background: var(--amber);
+    color: white;
+    padding: 17px 42px;
+    border-radius: 50px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.25s;
+    box-shadow: 0 8px 24px rgba(217,96,122,0.3);
+  }
+
+  .btn-rose:hover { background: #B84060; transform: translateY(-3px); box-shadow: 0 12px 32px rgba(217,96,122,0.4); }
+
+  .btn-outline-rose {
+    background: transparent;
+    color: var(--amber);
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    border: 2.5px solid var(--amber);
+    transition: all 0.25s;
+  }
+
+  .btn-outline-rose:hover { background: var(--amber-pale); transform: translateY(-2px); }
+
+  .hero-trust-pills {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .trust-pill {
+    background: white;
+    border: 1.5px solid var(--border-soft);
+    border-radius: 50px;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-soft);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+
+  /* Hero visual */
+  .hero-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .profile-match-card {
+    background: white;
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: 0 12px 40px rgba(217,96,122,0.12);
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .match-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  .match-avatars {
+    display: flex;
+    gap: -8px;
+  }
+
+  .avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 3px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .avatar-f { background: linear-gradient(135deg, var(--rose-light), var(--amber)); margin-right: -10px; z-index: 2; }
+  .avatar-m { background: linear-gradient(135deg, var(--amber), var(--gold)); z-index: 1; }
+
+  .match-badge-new {
+    background: var(--amber-pale);
+    color: var(--amber);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 50px;
+    border: 1px solid var(--amber);
+  }
+
+  .match-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+
+  .match-details {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+
+  .match-tag {
+    background: var(--amber-pale);
+    color: var(--amber);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 50px;
+  }
+
+  .compatibility-bar {
+    background: var(--border-soft);
+    height: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+
+  .compatibility-fill {
+    height: 100%;
+    border-radius: 8px;
+    background: linear-gradient(to right, var(--amber), var(--amber));
+  }
+
+  .compatibility-label {
+    font-size: 13px;
+    color: var(--text-soft);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mini-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 360px;
+    width: 100%;
+  }
+
+  .mini-stat {
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    border: 1px solid var(--border-soft);
+  }
+
+  .mini-stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--amber);
+    display: block;
+    line-height: 1;
+  }
+
+  .mini-stat-label {
+    font-size: 12px;
+    color: var(--text-soft);
+    font-weight: 600;
+  }
+
+  /* SERVICES */
+  .services {
+    padding: 90px 60px;
+    background: white;
+  }
+
+  .section-label {
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--amber);
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 46px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 14px;
+    line-height: 1.2;
+  }
+
+  .section-title em { color: var(--amber); font-style: italic; }
+
+  .section-subtitle {
+    text-align: center;
+    color: var(--text-soft);
+    font-size: 19px;
+    max-width: 580px;
+    margin: 0 auto 56px;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .svc-card {
+    background: var(--ivory);
+    border-radius: 20px;
+    padding: 38px 28px;
+    text-align: center;
+    border: 1.5px solid var(--border-soft);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .svc-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(to right, var(--amber), var(--amber));
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .svc-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(217,96,122,0.14);
+    border-color: var(--rose-light);
+  }
+
+  .svc-card:hover::before { opacity: 1; }
+
+  .svc-icon-wrap {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--amber-pale), var(--amber-pale));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    margin: 0 auto 20px;
+  }
+
+  .svc-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+
+  .svc-card p {
+    font-size: 16px;
+    color: var(--text-soft);
+    line-height: 1.75;
+  }
+
+  /* PROCESS */
+  .process {
+    background: linear-gradient(160deg, var(--blush), var(--amber-pale));
+    padding: 90px 60px;
+  }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-content: center;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .process-step {
+    background: white;
+    border-radius: 20px;
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: 0 8px 28px rgba(217,96,122,0.08);
+    border: 1.5px solid var(--border-soft);
+  }
+
+  .step-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--amber), var(--amber));
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    box-shadow: 0 6px 16px rgba(217,96,122,0.3);
+  }
+
+  .process-step h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+
+  .process-step p {
+    font-size: 16px;
+    color: var(--text-soft);
+  }
+
+  /* TESTIMONIALS */
+  .testimonials {
+    background: white;
+    padding: 90px 60px;
+  }
+
+  .testimonials-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .tcard {
+    border-radius: 20px;
+    padding: 36px 28px;
+    background: var(--ivory);
+    border: 1.5px solid var(--border-soft);
+    position: relative;
+  }
+
+  .tcard-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .tcard-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .ta1 { background: linear-gradient(135deg, var(--amber), var(--rose-light)); }
+  .ta2 { background: linear-gradient(135deg, var(--amber), var(--gold)); }
+  .ta3 { background: linear-gradient(135deg, var(--sage), #8DB880); }
+
+  .tcard-info strong {
+    display: block;
+    font-size: 18px;
+    color: var(--text);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+  }
+
+  .tcard-info span {
+    font-size: 14px;
+    color: var(--text-soft);
+    font-weight: 600;
+  }
+
+  .tcard-stars { color: var(--amber); font-size: 18px; margin-bottom: 6px; }
+
+  .tcard p {
+    font-size: 17px;
+    color: var(--text-soft);
+    font-style: italic;
+    line-height: 1.75;
+  }
+
+  .tcard-quote {
+    font-size: 60px;
+    line-height: 1;
+    color: var(--amber-pale);
+    position: absolute;
+    top: 14px; right: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+  }
+
+  /* CONTACT */
+  .contact-section {
+    background: var(--blush);
+    padding: 90px 60px;
+  }
+
+  .contact-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: start;
+  }
+
+  .contact-info h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .contact-info h2 em { color: var(--amber); font-style: italic; }
+
+  .contact-info p {
+    color: var(--text-soft);
+    font-size: 18px;
+    margin-bottom: 28px;
+    line-height: 1.75;
+  }
+
+  .contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    font-size: 17px;
+    color: var(--text-soft);
+    font-weight: 600;
+  }
+
+  .contact-detail-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--amber-pale);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .form-card {
+    background: white;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 12px 40px rgba(217,96,122,0.1);
+  }
+
+  .form-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    color: var(--text);
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+
+  .fc-field {
+    margin-bottom: 16px;
+  }
+
+  .fc-field label {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-soft);
+    margin-bottom: 6px;
+  }
+
+  .fc-field input,
+  .fc-field select,
+  .fc-field textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid var(--border-soft);
+    border-radius: 12px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    color: var(--text);
+    background: var(--ivory);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .fc-field input:focus,
+  .fc-field select:focus,
+  .fc-field textarea:focus { border-color: var(--amber); }
+
+  .fc-field textarea { min-height: 110px; resize: vertical; }
+
+  .fc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+  /* CTA BANNER */
+  .cta-banner {
+    background: linear-gradient(135deg, var(--amber) 0%, var(--rose-light) 100%);
+    padding: 80px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-banner::before {
+    content: '🌸 🌸 🌸 🌸 🌸';
+    position: absolute;
+    top: 20px; left: 0; right: 0;
+    text-align: center;
+    font-size: 40px;
+    opacity: 0.15;
+    letter-spacing: 30px;
+  }
+
+  .cta-banner h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 50px;
+    color: white;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+
+  .cta-banner p {
+    font-size: 20px;
+    color: rgba(255,255,255,0.88);
+    margin-bottom: 32px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn-white-pill {
+    background: white;
+    color: var(--amber);
+    padding: 18px 52px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.25s;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.15);
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .btn-white-pill:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(0,0,0,0.2); }
+
+  /* FOOTER */
+  footer {
+    background: #3A1A10;
+    padding: 60px 60px 28px;
+    color: #C8A090;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 36px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid #5A3028;
+  }
+
+  .footer-brand-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    color: var(--amber-pale);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .footer-col-title {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--amber-pale);
+    margin-bottom: 16px;
+  }
+
+  .footer-col ul { list-style: none; }
+
+  .footer-col ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-col ul li a {
+    color: #A07868;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s;
+  }
+
+  .footer-col ul li a:hover { color: var(--amber-pale); }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    color: #6A4838;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo-wrap">
+    <div class="logo-img"><img src='../TrueLink Logo.png' height="56px"></div>
+    <span class="name logo-link"><img src='../TrueLink Name.png' height='56px'></span>
+    <div class="logo-text">
+      <span class="sub">Trusted · Compassionate · Timeless</span>
+    </div>
+  </div>
+  
+  <ul class="nav-links">
+    <li><a href="mockup2-floral-garden.html">Home</a></li>
+    <li><a href="mockup2-about.html">About</a></li>
+    <li><a href="mockup2-services.html">Our Services</a></li>
+    <li><a href="mockup2-success-stories.html">Success Stories</a></li>
+    <li><a href="mockup2-contact.html">Contact</a></li>
+    <li><a href="mockup2-contact.html" class="nav-pill">Register Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">🌸 &nbsp; 40,000+ Families United</div>
+    <h1>Love Found Through<br><span class="highlight">Guidance & Grace</span></h1>
+    <p class="hero-desc">We walk beside you on the most beautiful journey of your life — with personal care, deep wisdom, and unwavering commitment to your happiness.</p>
+    <div class="hero-actions">
+      <a href="mockup2-contact.html" class="btn-rose">Begin Your Journey →</a>
+      <a href="mockup2-contact.html" class="btn-outline-rose">Talk to a Counsellor</a>
+    </div>
+    <div class="hero-trust-pills">
+      <div class="trust-pill">✅ 35+ Years Experience</div>
+      <div class="trust-pill">🔒 100% Privacy</div>
+      <div class="trust-pill">📞 24/7 Support</div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="profile-match-card">
+      <div class="match-header">
+        <div class="match-avatars">
+          <div class="avatar avatar-f">P</div>
+          <div class="avatar avatar-m">R</div>
+        </div>
+        <span class="match-badge-new">✨ New Match</span>
+      </div>
+      <div class="match-title">Priya & Rohan — Chennai</div>
+      <div class="match-details">
+        <span class="match-tag">Iyer Community</span>
+        <span class="match-tag">Software Engineer</span>
+        <span class="match-tag">28 & 32</span>
+      </div>
+      <div class="compatibility-bar">
+        <div class="compatibility-fill" style="width: 92%"></div>
+      </div>
+      <div class="compatibility-label">
+        <span>Compatibility Score</span>
+        <span style="color:var(--amber);font-weight:700">92%</span>
+      </div>
+    </div>
+
+    <div class="mini-stats">
+      <div class="mini-stat">
+        <span class="mini-stat-num">40K+</span>
+        <span class="mini-stat-label">Couples</span>
+      </div>
+      <div class="mini-stat">
+        <span class="mini-stat-num">35</span>
+        <span class="mini-stat-label">Years</span>
+      </div>
+      <div class="mini-stat">
+        <span class="mini-stat-num">150+</span>
+        <span class="mini-stat-label">Counsellors</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <p class="section-label">Our Services</p>
+  <h2 class="section-title">Everything You Need, with <em>Compassion</em></h2>
+  <p class="section-subtitle">We don't just find matches — we hold your hand through every beautiful, complex step of the journey.
+    Because enduring partnerships deserve mindful direction.
+  </p>
+  <div class="services-grid">
+    <div class="svc-card">
+      <div class="svc-icon-wrap">💑</div>
+      <h3>Personal Matchmaking</h3>
+      <p>Every match is carefully handpicked by a dedicated counsellor who truly knows you — never left to an algorithm alone.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon-wrap">🤲</div>
+      <h3>Family Support Sessions</h3>
+      <p>We bring families together in a warm, guided setting to align expectations and celebrate shared values.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon-wrap">🌙</div>
+      <h3>Kundali & Compatibility</h3>
+      <p>Certified Jyotish experts provide detailed horoscope analysis honouring traditions your family holds dear.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon-wrap">🏡</div>
+      <h3>Home Consultation</h3>
+      <p>Our counsellors come to you — comfortable and private meetings in the warmth of your own home.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon-wrap">💬</div>
+      <h3>Pre-Wedding Guidance</h3>
+      <p>Thoughtful conversations and counsel to help couples and families prepare for a strong, joyful marriage.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon-wrap">🔐</div>
+      <h3>Complete Discretion</h3>
+      <p>Your details and photos are always protected — shared only when you specifically give your permission.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <p class="section-label">How It Works</p>
+  <h2 class="section-title">A Simple, Guided Path to <em>Your Match</em></h2>
+  <p class="section-subtitle" style="margin-bottom:48px">We make the journey smooth, transparent, and filled with care at every milestone.</p>
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="step-circle">1</div>
+      <h3>Thoughtful Enrollment</h3>
+      <p>We engage with individuals who demonstrate sincerity and clear purpose.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-circle">2</div>
+      <h3>Insightful Screening</h3>
+      <p>Compatibility is examined with maturity and foresight rather than haste.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-circle">3</div>
+      <h3>Deliberate Selection</h3>
+      <p>Each introduction is carefully considered rather than mechanically suggested.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-circle">4</div>
+      <h3>Refined Communication</h3>
+      <p>Interactions are managed with discretion to ensure mutual comfort.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-circle">5</div>
+      <h3>Sustained Support</h3>
+      <p>Guidance remains available until clarity and resolution are achieved.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <p class="section-label">Success Stories</p>
+  <h2 class="section-title">Families Who Found Their <em>Joy</em></h2>
+  <p class="section-subtitle">Real stories, real happiness — families just like yours.</p>
+  <div class="testimonials-row">
+    <div class="tcard">
+      <div class="tcard-quote">"</div>
+      <div class="tcard-top">
+        <div class="tcard-avatar ta1">S</div>
+        <div class="tcard-info">
+          <strong>Sunita & Vikram Rao</strong>
+          <span>Hyderabad — Married 2023</span>
+        </div>
+      </div>
+      <div class="tcard-stars">★★★★★</div>
+      <p>The counsellor felt like a trusted aunt — patient, understanding, and never pushy. She found our daughter a match who truly complements her in every way.</p>
+    </div>
+    <div class="tcard">
+      <div class="tcard-quote">"</div>
+      <div class="tcard-top">
+        <div class="tcard-avatar ta2">G</div>
+        <div class="tcard-info">
+          <strong>Gopalan Family</strong>
+          <span>Coimbatore — Matched 2022</span>
+        </div>
+      </div>
+      <div class="tcard-stars">★★★★★</div>
+      <p>After my wife passed, I thought at 60 this chapter of my life was over. True Link Vivah's counsellor helped me believe again. I remarried happily last spring.</p>
+    </div>
+    <div class="tcard">
+      <div class="tcard-quote">"</div>
+      <div class="tcard-top">
+        <div class="tcard-avatar ta3">M</div>
+        <div class="tcard-info">
+          <strong>Meena & Suresh Pillai</strong>
+          <span>Thiruvananthapuram — 2021</span>
+        </div>
+      </div>
+      <div class="tcard-stars">★★★★★</div>
+      <p>Our son had specific requirements about caste, profession, and horoscope. The team respected all our traditions and found the perfect match within months.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section">
+  <div class="contact-wrap">
+    <div class="contact-info">
+      <h2>Let's Start<br>Your <em>Beautiful</em><br>Journey Together</h2>
+      <p>Our counsellors are here to listen, guide, and support you. Reach out at any time — we always respond within 24 hours.</p>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📞</div>
+        <span>+91 95914 71691</span>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">✉️</div>
+        <span>truelinkmatrimony@gmail.com</span>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">🕐</div>
+        <span>Monday–Saturday, 9am–8pm IST</span>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">💬</div>
+        <span>WhatsApp: +91 95914 71691</span>
+      </div>
+    </div>
+    <div class="form-card">
+      <h3>Request a Free Consultation</h3>
+      <div class="fc-row">
+        <div class="fc-field">
+          <label>Full Name</label>
+          <input type="text" placeholder="Your name">
+        </div>
+        <div class="fc-field">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="+91 XXXXX XXXXX">
+        </div>
+      </div>
+      <div class="fc-row">
+        <div class="fc-field">
+          <label>City</label>
+          <input type="text" placeholder="Your city">
+        </div>
+        <div class="fc-field">
+          <label>Registering For</label>
+          <select>
+            <option>Son</option>
+            <option>Daughter</option>
+            <option>Self</option>
+          </select>
+        </div>
+      </div>
+      <div class="fc-field">
+        <label>Tell Us a Bit About Yourself</label>
+        <textarea placeholder="Share your preferences, traditions, or any questions — we're here to listen..."></textarea>
+      </div>
+      <a href="mockup2-contact.html" class="btn-rose" style="display:block;text-align:center;margin-top:8px">Send My Request 🌸</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <h2>Begin the Most Beautiful<br>Chapter of Your Life</h2>
+  <p>Register free today and let our team find the match your heart has been searching for.</p>
+  <a href="mockup2-contact.html" class="btn-white-pill">Register Free — It Only Takes 5 Minutes</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <a href="mockup2-floral-garden.html" class="footer-logo-link"><img src="../TrueLink.png" alt="True Link Vivah" class="footer-logo-img"></a>
+      <p style="color:#8A6858;font-size:16px;max-width:280px;line-height:1.75">Helping families across India find love, joy, and lifelong companionship — with deep respect for tradition and the human heart.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Services</div>
+      <ul>
+        <li><a href="mockup2-services.html">Personal Matchmaking</a></li>
+        <li><a href="mockup2-services.html">Horoscope Matching</a></li>
+        <li><a href="mockup2-services.html">Family Counselling</a></li>
+        <li><a href="mockup2-services.html">Home Consultation</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Company</div>
+      <ul>
+        <li><a href="mockup2-about.html">About Us</a></li>
+        <li><a href="mockup2-about.html">Our Team</a></li>
+        <li><a href="mockup2-success-stories.html">Success Stories</a></li>
+        <li><a href="mockup2-contact.html">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Contact</div>
+      <ul>
+        <li><a href="tel:+919591471691">+91 95914 71691</a></li>
+        <li><a href="https://wa.me/919591471691">WhatsApp Us</a></li>
+        <li><a href="mailto:truelinkmatrimony@gmail.com">Email Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2024 True Link Vivah. All rights reserved. &nbsp;|&nbsp; Privacy Policy &nbsp;|&nbsp; Terms
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Success Stories – True Link Vivah</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ivory:#FFFBF3; --blush:#F9E8D8; --amber-light:#FFB641; --amber-pale:#F7D38C; --amber:#E8A030; --amber-pale-light:#FFF3D6; --gold:#C9882A; --sage:#C8D8C0; --text:#3A2015; --text-soft:#6B4030; --white:#FFFFFF; --border-soft:#F0D4B8; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Nunito',sans-serif; background:var(--ivory); color:var(--text); font-size:17px; line-height:1.75; }
+  nav { background:var(--white); padding:0 50px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:100; box-shadow:0 2px 20px rgba(200,100,80,0.08); border-bottom:3px solid var(--amber-pale); }
+  .logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 0;
+  }
+
+  .logo-flower {
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  .logo-text .name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--amber);
+    display: block;
+    line-height: 1;
+  }
+
+  .logo-text .sub {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    color: var(--amber);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  .logo-link { display:flex; align-items:center; text-decoration:none; }
+  .logo-img { height:56px; width:auto; }
+  .footer-logo-link { display:inline-block; text-decoration:none; }
+  .footer-logo-img { height:40px; width:auto; }
+  .nav-links { display:flex; gap:30px; list-style:none; align-items:center; }
+  .nav-links a { font-size:16px; font-weight:600; color:var(--text-soft); text-decoration:none; transition:color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color:var(--amber); }
+  .nav-pill { background:var(--amber); color:white !important; padding:12px 28px; border-radius:50px; }
+
+  .page-hero { background:linear-gradient(160deg,var(--amber-pale),var(--amber-pale),var(--blush)); padding:70px 60px; position:relative; overflow:hidden; }
+  .page-hero::before { content:'🌸'; position:absolute; top:20px;right:40px; font-size:120px; opacity:0.1; }
+  .breadcrumb { font-size:14px; color:var(--text-soft); margin-bottom:16px; font-weight:600; }
+  .breadcrumb a { color:var(--amber); text-decoration:none; }
+  .page-hero h1 { font-family:'Cormorant Garamond',serif; font-size:56px; font-weight:600; line-height:1.15; margin-bottom:16px; }
+  .page-hero h1 em { color:var(--amber); font-style:italic; }
+  .page-hero p { font-size:20px; color:var(--text-soft); max-width:560px; }
+
+  .btn-rose { background:var(--amber); color:white; padding:15px 38px; border-radius:50px; font-size:17px; font-weight:700; text-decoration:none; display:inline-block; transition:all 0.25s; font-family:'Nunito',sans-serif; }
+  .btn-rose:hover { background:#B84060; transform:translateY(-2px); }
+
+  /* STATS */
+  .stats-bar { display:grid; grid-template-columns:repeat(4,1fr); background:var(--amber); padding:32px 60px; text-align:center; gap:20px; }
+  .stat { color:white; }
+  .stat-num { font-family:'Cormorant Garamond',serif; font-size:40px; font-weight:600; display:block; }
+  .stat-label { font-size:14px; opacity:0.85; font-weight:600; }
+
+  /* FEATURED */
+  .featured-story { padding:80px 60px; background:white; }
+  .featured-inner { max-width:1100px; margin:0 auto; }
+  .featured-pill { display:inline-flex; align-items:center; gap:8px; background:var(--amber-pale); border:1.5px solid var(--amber-light); border-radius:50px; padding:8px 20px; font-size:14px; color:var(--amber); font-weight:700; margin-bottom:28px; }
+  .featured-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+  .featured-text h2 { font-family:'Cormorant Garamond',serif; font-size:42px; font-weight:600; margin-bottom:20px; line-height:1.2; }
+  .featured-text h2 em { color:var(--amber); font-style:italic; }
+  .featured-quote { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:20px; color:var(--text); line-height:1.75; border-left:3px solid var(--amber-light); padding-left:20px; margin-bottom:16px; }
+  .featured-by { font-size:16px; color:var(--text-soft); font-weight:600; }
+  .featured-card { background:linear-gradient(135deg,var(--amber-pale),var(--amber-pale)); border-radius:24px; padding:40px; text-align:center; }
+  .couple-hearts { font-size:50px; margin-bottom:14px; }
+  .couple-name { font-family:'Cormorant Garamond',serif; font-size:30px; font-weight:600; color:var(--amber); margin-bottom:6px; }
+  .couple-date { font-size:15px; color:var(--text-soft); font-weight:600; margin-bottom:14px; }
+  .couple-pills { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; }
+  .couple-pill { background:white; border:1.5px solid var(--border-soft); border-radius:50px; padding:5px 14px; font-size:13px; color:var(--text-soft); font-weight:600; }
+
+  /* STORIES GRID */
+  .stories-grid-sec { padding:80px 60px; background:var(--ivory); }
+  .stories-grid-sec h2 { font-family:'Cormorant Garamond',serif; font-size:44px; font-weight:600; text-align:center; margin-bottom:8px; }
+  .stories-grid-sec h2 em { color:var(--amber); font-style:italic; }
+  .s-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; max-width:1100px; margin:56px auto 0; }
+  .s-card { background:white; border-radius:20px; padding:32px 26px; border:1.5px solid var(--border-soft); transition:transform 0.25s,box-shadow 0.25s; position:relative; }
+  .s-card:hover { transform:translateY(-6px); box-shadow:0 16px 36px rgba(217,96,122,0.1); }
+  .s-top { display:flex; align-items:center; gap:12px; margin-bottom:18px; }
+  .s-avatar { width:52px; height:52px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; color:white; flex-shrink:0; }
+  .av1 { background:linear-gradient(135deg,var(--amber),var(--amber-light)); }
+  .av2 { background:linear-gradient(135deg,var(--amber),var(--gold)); }
+  .av3 { background:linear-gradient(135deg,#C07060,#A04030); }
+  .av4 { background:linear-gradient(135deg,#90A880,#607A50); }
+  .av5 { background:linear-gradient(135deg,#8090C0,#5060A0); }
+  .av6 { background:linear-gradient(135deg,#D07090,#A04060); }
+  .s-name { font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:600; color:var(--text); display:block; }
+  .s-meta { font-size:13px; color:var(--text-soft); font-weight:600; }
+  .s-stars { color:var(--amber); font-size:16px; margin-bottom:10px; }
+  .s-text { font-size:17px; color:var(--text-soft); font-style:italic; line-height:1.75; margin-bottom:14px; }
+  .s-tags { display:flex; flex-wrap:wrap; gap:6px; }
+  .s-tag { background:var(--amber-pale); color:var(--amber); font-size:12px; font-weight:700; padding:3px 12px; border-radius:50px; }
+
+  /* CALL TO SHARE */
+  .share-cta { background:linear-gradient(160deg,var(--blush),var(--amber-pale)); padding:70px 60px; text-align:center; }
+  .share-cta h2 { font-family:'Cormorant Garamond',serif; font-size:44px; font-weight:600; margin-bottom:14px; }
+  .share-cta h2 em { color:var(--amber); font-style:italic; }
+  .share-cta p { font-size:19px; color:var(--text-soft); margin-bottom:28px; max-width:520px; margin-left:auto; margin-right:auto; }
+
+  /* CTA BANNER */
+  .cta-banner { background:linear-gradient(135deg,var(--amber),var(--amber-light)); padding:80px 60px; text-align:center; }
+  .cta-banner h2 { font-family:'Cormorant Garamond',serif; font-size:48px; font-weight:600; color:white; margin-bottom:14px; }
+  .cta-banner p { font-size:20px; color:rgba(255,255,255,0.88); margin-bottom:32px; max-width:520px; margin-left:auto; margin-right:auto; }
+  .btn-white-pill { background:white; color:var(--amber); padding:18px 48px; border-radius:50px; font-size:19px; font-weight:700; text-decoration:none; display:inline-block; transition:all 0.25s; font-family:'Nunito',sans-serif; }
+  .btn-white-pill:hover { transform:translateY(-3px); }
+
+  footer { background:#3A1A10; padding:60px 60px 28px; color:#C8A090; }
+  .footer-logo-img { height:70px; width:auto; }
+  .footer-top { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; margin-bottom:36px; padding-bottom:36px; border-bottom:1px solid #5A3028; }
+  .footer-brand-name { font-family:'Cormorant Garamond',serif; font-size:28px; color:#FFF3D6; font-weight:600; margin-bottom:12px; }
+  .footer-col-title { font-size:15px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#FFF3D6; margin-bottom:16px; }
+  .footer-col ul { list-style:none; }
+  .footer-col ul li { margin-bottom:10px; }
+  .footer-col ul li a { color:#A07868; text-decoration:none; font-size:16px; }
+  .footer-col ul li a:hover { color:#FFF3D6; }
+  .footer-bottom { text-align:center; font-size:14px; color:#6A4838; }
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo-wrap">
+    <div class="logo-img"><img src='../TrueLink Logo.png' height="56px"></div>
+    <span class="name logo-link"><img src='../TrueLink Name.png' height='56px'></span>
+    <div class="logo-text">
+      <span class="sub">Trusted · Compassionate · Timeless</span>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="mockup2-floral-garden.html">Home</a></li>
+    <li><a href="mockup2-about.html">About</a></li>
+    <li><a href="mockup2-services.html">Our Services</a></li>
+    <li><a href="mockup2-success-stories.html" class="active">Success Stories</a></li>
+    <li><a href="mockup2-contact.html">Contact</a></li>
+    <li><a href="mockup2-contact.html" class="nav-pill">Register Now</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="mockup2-floral-garden.html">Home</a> › Success Stories</div>
+  <h1>40,000 Families Found<br>Their <em>Joy</em> Here</h1>
+  <p>Every story below is a family that trusted us with their hearts. We share these with their blessing, and with deep gratitude.</p>
+</div>
+
+<div class="stats-bar">
+  <div class="stat"><span class="stat-num">40,000+</span><span class="stat-label">Couples United</span></div>
+  <div class="stat"><span class="stat-num">35</span><span class="stat-label">Years Serving Families</span></div>
+  <div class="stat"><span class="stat-num">97%</span><span class="stat-label">Satisfaction Rate</span></div>
+  <div class="stat"><span class="stat-num">12</span><span class="stat-label">Cities & Counting</span></div>
+</div>
+
+<!-- FEATURED -->
+<section class="featured-story">
+  <div class="featured-inner">
+    <div class="featured-pill">🌸 &nbsp; Story of the Month</div>
+    <div class="featured-grid">
+      <div class="featured-text">
+        <h2>Sunita & Vikram —<br>A Family <em>Made Whole</em></h2>
+        <p class="featured-quote">"Our counsellor felt like a trusted aunt — patient, never rushing, and always genuinely interested in our daughter's happiness. She found Vikram, and the moment we met his family, we knew. The wedding was everything we dreamed of."</p>
+        <p class="featured-by">— Sunita Rao, mother of the bride | Hyderabad, 2023</p>
+        <p style="margin-top:12px;color:var(--text-soft);font-size:16px">Counselled by: <strong>Lalitha Rao, Director of Counselling</strong></p>
+      </div>
+      <div class="featured-card">
+        <div class="couple-hearts">💑</div>
+        <div class="couple-name">Sunita & Vikram Rao</div>
+        <div class="couple-date">Married — February 2023 · Hyderabad</div>
+        <div class="couple-pills">
+          <span class="couple-pill">Kamma Community</span>
+          <span class="couple-pill">Doctor & Engineer</span>
+          <span class="couple-pill">Matched in 5 Months</span>
+          <span class="couple-pill">Kundali: 32/36</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORIES GRID -->
+<section class="stories-grid-sec">
+  <p style="font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);font-weight:700;text-align:center;margin-bottom:12px">Real Families, Real Happiness</p>
+  <h2>More Stories of <em>Lasting Love</em></h2>
+  <div class="s-grid">
+    <div class="s-card">
+      <div class="s-top"><div class="s-avatar av1">G</div><div><span class="s-name">Gopalan Family</span><span class="s-meta">Coimbatore — Matched 2022</span></div></div>
+      <div class="s-stars">★★★★★</div>
+      <p class="s-text">After my wife passed, I thought at 60 my chapter was closed. True Link Vivah's counsellor helped me believe again. I remarried happily last spring and my family couldn't be more grateful.</p>
+      <div class="s-tags"><span class="s-tag">Remarriage</span><span class="s-tag">Home Visit</span></div>
+    </div>
+    <div class="s-card">
+      <div class="s-top"><div class="s-avatar av2">M</div><div><span class="s-name">Meena & Suresh Pillai</span><span class="s-meta">Thiruvananthapuram — 2021</span></div></div>
+      <div class="s-stars">★★★★★</div>
+      <p class="s-text">Our son had very specific Rashi, community, and professional requirements. The counsellor respected each one and found a match beyond even what we had hoped for.</p>
+      <div class="s-tags"><span class="s-tag">Kundali Matching</span><span class="s-tag">Nair Community</span></div>
+    </div>
+    <div class="s-card">
+      <div class="s-top"><div class="s-avatar av3">A</div><div><span class="s-name">Anitha Krishnaswami</span><span class="s-meta">Bangalore — Married 2023</span></div></div>
+      <div class="s-stars">★★★★★</div>
+      <p class="s-text">I was nervous and kept second-guessing everything. My counsellor called every week — not to push, just to check in. That care made the entire journey feel safe.</p>
+      <div class="s-tags"><span class="s-tag">Self-Registration</span><span class="s-tag">Golden Lotus Package</span></div>
+    </div>
+    <div class="s-card">
+      <div class="s-top"><div class="s-avatar av4">R</div><div><span class="s-name">Raghunathan Family</span><span class="s-meta">Chennai — Married 2022</span></div></div>
+      <div class="s-stars">★★★★★</div>
+      <p class="s-text">We came after our daughter had politely declined 9 other proposals. Our counsellor took time to understand exactly why. The next profile she showed us — our daughter said yes immediately.</p>
+      <div class="s-tags"><span class="s-tag">For Daughter</span><span class="s-tag">3 Months</span></div>
+    </div>
+    <div class="s-card">
+      <div class="s-top"><div class="s-avatar av5">P</div><div><span class="s-name">Padmini & Arun Menon</span><span class="s-meta">Kochi — Married 2023</span></div></div>
+      <div class="s-stars">★★★★★</div>
+      <p class="s-text">Two families from different states, different traditions. The family counselling sessions helped us find common ground beautifully — with warmth and no pressure whatsoever.</p>
+      <div class="s-tags"><span class="s-tag">Family Counselling</span><span class="s-tag">Inter-state</span></div>
+    </div>
+    <div class="s-card">
+      <div class="s-top"><div class="s-avatar av6">V</div><div><span class="s-name">Vijayalakshmi Naidu</span><span class="s-meta">Visakhapatnam — 2024</span></div></div>
+      <div class="s-stars">★★★★★</div>
+      <p class="s-text">Being a widow at 55 with grown children, I had so many hesitations. The counsellor listened without any judgement at all. I found love again, and my children are so happy for me.</p>
+      <div class="s-tags"><span class="s-tag">Remarriage</span><span class="s-tag">Home Visit</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SHARE CTA -->
+<div class="share-cta">
+  <h2>Found Your <em>Happy Ending</em> With Us?</h2>
+  <p>We would be deeply honoured to share your story with the thousands of families still on their journey. Reach out and let us know.</p>
+  <a href="mockup2-contact.html" class="btn-rose">Share Your Story 🌸</a>
+</div>
+
+<section class="cta-banner">
+  <h2>Your Story is Waiting to Bloom</h2>
+  <p>Join 40,000 families who began their journey with a simple conversation with us.</p>
+  <a href="mockup2-contact.html" class="btn-white-pill">Begin Your Journey Today</a>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div><a href="mockup2-floral-garden.html" class="footer-logo-link"><img src="../TrueLink.png" alt="True Link Vivah" class="footer-logo-img"></a><p style="color:#8A6858;font-size:16px;max-width:280px;line-height:1.75">Helping families across India find love, joy, and lifelong companionship with deep respect for tradition.</p></div>
+    <div class="footer-col"><div class="footer-col-title">Services</div><ul><li><a href="mockup2-services.html">Personal Matchmaking</a></li><li><a href="mockup2-services.html">Horoscope Matching</a></li><li><a href="mockup2-services.html">Family Counselling</a></li></ul></div>
+    <div class="footer-col"><div class="footer-col-title">Company</div><ul><li><a href="mockup2-about.html">About Us</a></li><li><a href="mockup2-success-stories.html">Success Stories</a></li></ul></div>
+    <div class="footer-col"><div class="footer-col-title">Contact</div><ul><li><a href="tel:+919591471691">+91 95914 71691</a></li><li><a href="mailto:truelinkmatrimony@gmail.com">truelinkmatrimony@gmail.com</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">© 2024 True Link Vivah. All rights reserved. | Privacy Policy | Terms</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us – True Link Vivah</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FDF6EC; --gold: #C9922A; --gold-light: #F0D490; --gold-pale: #FAF0D0;
+    --red: #A8233A; --red-soft: #D9607A; --warm-white: #FFFDF7;
+    --text: #2C1A0E; --text-mid: #5A3E28; --border: #E5C97A;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'EB Garamond',serif; background:var(--cream); color:var(--text); font-size:18px; line-height:1.75; }
+
+  .top-bar { background:var(--red); color:#FFF8EE; text-align:center; padding:10px; font-size:15px; letter-spacing:0.08em; }
+  nav { background:var(--warm-white); border-bottom:2px solid var(--border); padding:0 40px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:100; box-shadow:0 2px 12px rgba(180,130,40,0.08); }
+  .logo { display:flex; flex-direction:column; padding:18px 0; }
+  .logo-name { font-family:'Playfair Display',serif; font-size:28px; color:var(--red); letter-spacing:0.04em; line-height:1; }
+  .logo-tagline { font-size:12px; color:var(--gold); letter-spacing:0.15em; text-transform:uppercase; }
+  .logo-link { display:flex; align-items:center; text-decoration:none; }
+  .logo-img { height:56px; width:auto; }
+  .footer-logo-link { display:inline-block; text-decoration:none; }
+  .footer-logo-img { height:40px; width:auto; }
+  .nav-links { display:flex; gap:36px; list-style:none; align-items:center; }
+  .nav-links a { font-family:'EB Garamond',serif; font-size:17px; color:var(--text-mid); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color:var(--red); }
+  .nav-cta { background:var(--red); color:#FFF8EE !important; padding:10px 26px; border-radius:3px; font-size:16px !important; }
+  .nav-cta:hover { background:#8A1A2C !important; }
+
+  /* PAGE HERO */
+  .page-hero { background:linear-gradient(135deg,#FDF0D8,#FAE8C4,#F5D9A8); padding:70px 80px; position:relative; overflow:hidden; }
+  .page-hero::after { content:'❧'; position:absolute; bottom:20px; right:60px; font-size:100px; color:rgba(201,146,42,0.1); }
+  .breadcrumb { font-size:14px; color:var(--text-mid); margin-bottom:18px; letter-spacing:0.06em; }
+  .breadcrumb a { color:var(--gold); text-decoration:none; }
+  .page-hero h1 { font-family:'Playfair Display',serif; font-size:56px; line-height:1.15; margin-bottom:18px; }
+  .page-hero h1 em { color:var(--red); font-style:italic; }
+  .page-hero p { font-size:20px; color:var(--text-mid); max-width:580px; }
+
+  /* SHARED */
+  .section-eyebrow { font-size:12px; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
+  .section-divider { width:80px; height:2px; background:linear-gradient(to right,transparent,var(--gold),transparent); margin:20px auto 0; }
+  .btn-primary { background:var(--red); color:#FFF8EE; padding:16px 38px; font-family:'EB Garamond',serif; font-size:18px; border:none; cursor:pointer; letter-spacing:0.06em; text-decoration:none; display:inline-block; transition:background 0.2s,transform 0.2s; }
+  .btn-primary:hover { background:#8A1A2C; transform:translateY(-2px); }
+
+  /* STORY SECTION */
+  .story { padding:80px 80px; background:var(--warm-white); }
+  .story-grid { display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center; max-width:1100px; margin:0 auto; }
+  .story-text .eyebrow { font-size:12px; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+  .story-text h2 { font-family:'Playfair Display',serif; font-size:42px; line-height:1.2; margin-bottom:24px; }
+  .story-text h2 em { color:var(--red); font-style:italic; }
+  .story-text p { color:var(--text-mid); font-size:18px; margin-bottom:18px; line-height:1.8; }
+  .story-visual { background:var(--gold-pale); border:1px solid var(--border); padding:44px 36px; position:relative; }
+  .story-visual::before { content:''; position:absolute; top:-6px; left:-6px; right:6px; bottom:6px; border:1px solid var(--gold-light); pointer-events:none; }
+  .story-visual blockquote { font-family:'Playfair Display',serif; font-size:24px; font-style:italic; color:var(--text); line-height:1.6; margin-bottom:20px; }
+  .story-visual cite { font-size:15px; color:var(--text-mid); }
+
+  /* MILESTONES */
+  .milestones { padding:80px 80px; background:var(--cream); }
+  .milestones h2 { font-family:'Playfair Display',serif; font-size:40px; text-align:center; margin-bottom:16px; }
+  .milestones h2 em { color:var(--red); font-style:italic; }
+  .milestones-divider { width:80px; height:2px; background:linear-gradient(to right,transparent,var(--gold),transparent); margin:0 auto 56px; }
+  .timeline { max-width:900px; margin:0 auto; position:relative; }
+  .timeline::before { content:''; position:absolute; left:50%; top:0; bottom:0; width:2px; background:linear-gradient(to bottom,var(--gold-light),var(--border)); transform:translateX(-50%); }
+  .tl-item { display:grid; grid-template-columns:1fr 60px 1fr; gap:0; margin-bottom:48px; align-items:start; }
+  .tl-left { text-align:right; padding-right:36px; }
+  .tl-right { padding-left:36px; }
+  .tl-center { display:flex; justify-content:center; }
+  .tl-dot { width:16px; height:16px; border-radius:50%; background:var(--red); border:3px solid var(--cream); box-shadow:0 0 0 3px var(--gold-light); margin-top:6px; }
+  .tl-year { font-family:'Playfair Display',serif; font-size:28px; color:var(--gold); font-weight:700; display:block; line-height:1; margin-bottom:6px; }
+  .tl-title { font-family:'Playfair Display',serif; font-size:20px; color:var(--text); margin-bottom:6px; }
+  .tl-desc { font-size:16px; color:var(--text-mid); line-height:1.7; }
+  .tl-item:nth-child(even) .tl-left { text-align:left; padding-right:0; padding-left:36px; order:3; }
+  .tl-item:nth-child(even) .tl-right { text-align:right; padding-left:0; padding-right:36px; order:1; }
+  .tl-item:nth-child(even) .tl-center { order:2; }
+
+  /* TEAM */
+  .team { padding:80px 80px; background:var(--warm-white); }
+  .team h2 { font-family:'Playfair Display',serif; font-size:40px; text-align:center; margin-bottom:8px; }
+  .team h2 em { color:var(--red); font-style:italic; }
+  .team-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:28px; max-width:1100px; margin:60px auto 0; }
+  .team-card { background:var(--cream); border:1px solid var(--border); padding:32px 24px; text-align:center; transition:transform 0.25s,box-shadow 0.25s; }
+  .team-card:hover { transform:translateY(-6px); box-shadow:0 16px 36px rgba(168,35,58,0.1); }
+  .team-avatar { width:80px; height:80px; border-radius:50%; margin:0 auto 16px; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:30px; color:white; font-weight:700; }
+  .av1 { background:linear-gradient(135deg,var(--red-soft),var(--red)); }
+  .av2 { background:linear-gradient(135deg,var(--gold),#A87020); }
+  .av3 { background:linear-gradient(135deg,#C07060,#A04030); }
+  .av4 { background:linear-gradient(135deg,#B08060,var(--gold)); }
+  .team-card h3 { font-family:'Playfair Display',serif; font-size:20px; margin-bottom:4px; }
+  .team-card .role { font-size:14px; color:var(--gold); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:10px; }
+  .team-card p { font-size:15px; color:var(--text-mid); line-height:1.7; }
+
+  /* VALUES */
+  .values { padding:80px 80px; background:var(--gold-pale); }
+  .values h2 { font-family:'Playfair Display',serif; font-size:40px; text-align:center; margin-bottom:8px; }
+  .values h2 em { color:var(--red); font-style:italic; }
+  .values-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; max-width:1100px; margin:56px auto 0; }
+  .value-card { background:var(--warm-white); border:1px solid var(--border); padding:38px 30px; position:relative; }
+  .value-card::before { content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:50px; height:3px; background:var(--red); }
+  .value-icon { font-size:38px; display:block; margin-bottom:16px; }
+  .value-card h3 { font-family:'Playfair Display',serif; font-size:22px; margin-bottom:10px; }
+  .value-card p { font-size:17px; color:var(--text-mid); line-height:1.75; }
+
+  /* CTA */
+  .cta-section { background:linear-gradient(135deg,var(--red),#7A0E22); padding:80px 60px; text-align:center; }
+  .cta-section h2 { font-family:'Playfair Display',serif; font-size:44px; color:#FFF8EE; margin-bottom:14px; }
+  .cta-section p { font-size:20px; color:rgba(255,248,238,0.85); margin-bottom:34px; max-width:540px; margin-left:auto; margin-right:auto; }
+  .btn-cta-white { background:#FFF8EE; color:var(--red); padding:18px 48px; font-family:'EB Garamond',serif; font-size:20px; border:none; cursor:pointer; text-decoration:none; display:inline-block; transition:all 0.2s; font-weight:600; }
+  .btn-cta-white:hover { background:var(--gold-light); transform:translateY(-2px); }
+
+  /* FOOTER */
+  footer { background:#2C1A0E; color:#D4B896; padding:56px 60px 30px; }
+  .footer-logo-img { height:100px; width:auto; }
+  .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; margin-bottom:40px; }
+  .footer-col h4 { font-family:'Playfair Display',serif; font-size:18px; color:var(--gold-light); margin-bottom:16px; }
+  .footer-col ul { list-style:none; }
+  .footer-col ul li { margin-bottom:10px; }
+  .footer-col ul li a { color:#A08870; text-decoration:none; font-size:16px; transition:color 0.2s; }
+  .footer-col ul li a:hover { color:var(--gold-light); }
+  .footer-bottom { border-top:1px solid #4A3020; padding-top:24px; text-align:center; font-size:14px; color:#6A5040; }
+</style>
+</head>
+<body>
+<div class="top-bar">📞 Call us anytime: +91 95914 71691 &nbsp;|&nbsp; ✉ truelinkmatrimony@gmail.com &nbsp;|&nbsp; Mon–Sat 9am–7pm</div>
+<nav>
+  <div class="logo">
+    <span class="logo-name"><img src='../TrueLink Logo.png' height='50px'><img src='../TrueLink Name.png' height='50px'></span>
+    <span class="logo-tagline">Trusted Since 1985 · Over 50,000 Unions</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="mockup1-classic-elegance.html">Home</a></li>
+    <li><a href="mockup1-about.html" class="active">About Us</a></li>
+    <li><a href="mockup1-services.html">Our Services</a></li>
+    <li><a href="mockup1-success-stories.html">Success Stories</a></li>
+    <li><a href="mockup1-contact.html">Contact</a></li>
+    <li><a href="mockup1-contact.html" class="nav-cta">Register Free</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="breadcrumb"><a href="mockup1-classic-elegance.html">Home</a> &nbsp;›&nbsp; About Us</div>
+  <h1>A <em>Family Legacy</em><br>of Sincere Connection</h1>
+  <p>Generations have shaped our understanding of what it means to truly match two families. We honour that legacy while embracing the present.</p>
+</div>
+
+<!-- STORY -->
+<section class="story">
+  <div class="story-grid">
+    <div class="story-text">
+      <div class="eyebrow">Our Legacy</div>
+      <h2>A Foundation Built<br>by <em>Generations</em></h2>
+      <p>Some responsibilities choose you before you choose them. The foundation of what I built was formed long before I consciously decided to build it.</p>
+      <p>My grandfather began this work after retiring from his role as a government employee. What started as a small effort soon became a respected responsibility — bringing families together through careful understanding and sincere introductions. His approach was entirely personal: detailed records, direct conversations with families, home visits, and clarity in every alliance. To him, marriage was a serious commitment requiring thoughtful responsibility.</p>
+      <p>I grew up observing this process closely. Listening to conversations, watching the patience involved, and understanding the sincerity behind every introduction shaped my belief that connecting two individuals means shaping their future.</p>
+      <p>As the world became digital, I realized that while technology offers convenience, genuine compatibility still requires human understanding. That realization led me to carry forward his legacy through a refined, digitally integrated approach — while preserving the traditional values that built its foundation.</p>
+      <p><strong>TrueLink Matrimony combines personal involvement with modern systems.</strong> We use technology for reach and efficiency, yet we continue to rely on manual review, personal verification, and direct interaction — because trust cannot be automated.</p>
+      <a href="mockup1-contact.html" class="btn-primary" style="margin-top:12px">Learn More About Our Approach</a>
+    </div>
+    <div class="story-visual">
+      <blockquote>"This is not merely a business venture for me. It is a continuation of a legacy and a responsibility I carry with sincerity."</blockquote>
+      <cite>— Lohit Suresh, Founder</cite>
+    </div>
+  </div>
+</section>
+
+<!-- MILESTONES -->
+<section class="milestones">
+  <div class="section-eyebrow" style="text-align:center">Our Journey</div>
+  <h2>Four Decades of <em>Milestones</em></h2>
+  <div class="milestones-divider"></div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-left">
+        <span class="tl-year">1985</span>
+        <div class="tl-title">Founded in Chennai</div>
+        <div class="tl-desc">Smt. Ananya Krishnaswami opens our first counselling centre with a mission to bring dignity to matchmaking.</div>
+      </div>
+      <div class="tl-center"><div class="tl-dot"></div></div>
+      <div class="tl-right"></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-right">
+        <span class="tl-year">1994</span>
+        <div class="tl-title">Expanding to Bangalore & Hyderabad</div>
+        <div class="tl-desc">Demand from families across South India led to our first branch network, adding two new full counselling centres.</div>
+      </div>
+      <div class="tl-center"><div class="tl-dot"></div></div>
+      <div class="tl-left"></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-left">
+        <span class="tl-year">2003</span>
+        <div class="tl-title">10,000 Couples Milestone</div>
+        <div class="tl-desc">We celebrated our 10,000th successful union — a testament to the trust families placed in our counsellors.</div>
+      </div>
+      <div class="tl-center"><div class="tl-dot"></div></div>
+      <div class="tl-right"></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-right">
+        <span class="tl-year">2010</span>
+        <div class="tl-title">Home Visit Programme Launched</div>
+        <div class="tl-desc">Recognising the needs of elder families and those with mobility constraints, we introduced our in-home consultation service.</div>
+      </div>
+      <div class="tl-center"><div class="tl-dot"></div></div>
+      <div class="tl-left"></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-left">
+        <span class="tl-year">2019</span>
+        <div class="tl-title">National Recognition Award</div>
+        <div class="tl-desc">Awarded Best Matrimonial Service (South India) by the National Family Welfare Council for our ethical practices.</div>
+      </div>
+      <div class="tl-center"><div class="tl-dot"></div></div>
+      <div class="tl-right"></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-right">
+        <span class="tl-year">2024</span>
+        <div class="tl-title">50,000 Happy Unions</div>
+        <div class="tl-desc">Our 50,000th successful match — and our commitment to every family that walks through our doors remains as strong as ever.</div>
+      </div>
+      <div class="tl-center"><div class="tl-dot"></div></div>
+      <div class="tl-left"></div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <div class="section-eyebrow" style="text-align:center">What We Stand For</div>
+  <h2>Our Core <em>Values</em></h2>
+  <div class="section-divider"></div>
+  <div class="values-grid">
+    <div class="value-card">
+      <span class="value-icon">🤲</span>
+      <h3>Dignity Above All</h3>
+      <p>Every family that walks through our door is treated with the same deep respect — regardless of background, community, or circumstance.</p>
+    </div>
+    <div class="value-card">
+      <span class="value-icon">🔒</span>
+      <h3>Absolute Privacy</h3>
+      <p>Your personal details, photographs, and family information are never shared without your explicit, informed permission.</p>
+    </div>
+    <div class="value-card">
+      <span class="value-icon">⏳</span>
+      <h3>Patience, Always</h3>
+      <p>We never rush a family. A sacred bond deserves time, care, and the confidence that comes from knowing a match is truly right.</p>
+    </div>
+    <div class="value-card">
+      <span class="value-icon">🕊️</span>
+      <h3>No Pressure, Ever</h3>
+      <p>We guide and suggest — we never push. Every decision rests entirely with the family, as it should.</p>
+    </div>
+    <div class="value-card">
+      <span class="value-icon">🌿</span>
+      <h3>Respect for Tradition</h3>
+      <p>Whether community customs, horoscope requirements, or family rituals — we honour every tradition your family holds dear.</p>
+    </div>
+    <div class="value-card">
+      <span class="value-icon">💛</span>
+      <h3>Lifelong Commitment</h3>
+      <p>Our responsibility to your family does not end at the wedding. Our counsellors remain available to support you through every chapter.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Begin Your Journey With Us</h2>
+  <p>Thousands of families trusted us with their most important search. We are ready to walk beside you too.</p>
+  <a href="mockup1-contact.html" class="btn-cta-white">Request a Free Consultation</a>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div><a href="mockup1-classic-elegance.html" class="footer-logo-link"><img src="../TrueLink.png" alt="True Link Vivah" class="footer-logo-img"></a><p style="color:#A08870;font-size:16px;line-height:1.75;max-width:280px;">Helping families find the right match with dignity, tradition, and care.</p></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="mockup1-services.html">Personal Matchmaking</a></li><li><a href="mockup1-services.html">Family Counselling</a></li><li><a href="mockup1-services.html">Horoscope Matching</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="mockup1-about.html">About Us</a></li><li><a href="mockup1-success-stories.html">Success Stories</a></li><li><a href="mockup1-contact.html">Careers</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+919591471691">+91 95914 71691</a></li><li><a href="mailto:truelinkmatrimony@gmail.com">truelinkmatrimony@gmail.com</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">© 2024 True Link Vivah. All rights reserved. &nbsp;|&nbsp; Privacy Policy &nbsp;|&nbsp; Terms of Service</div>
+</footer>
+</body>
+</html>

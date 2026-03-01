@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us – True Link Vivah</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ivory:#FFFBF3; --blush:#F9E8D8; --amber-light:#FFB641; --amber-pale:#F7D38C; --amber:#E8A030; --amber-pale-light:#FFF3D6; --gold:#C9882A; --sage:#C8D8C0; --text:#3A2015; --text-soft:#6B4030; --white:#FFFFFF; --border-soft:#F0D4B8; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Nunito',sans-serif; background:var(--ivory); color:var(--text); font-size:17px; line-height:1.75; }
+  nav { background:var(--white); padding:0 50px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:100; box-shadow:0 2px 20px rgba(200,100,80,0.08); border-bottom:3px solid var(--amber-pale); }
+  .logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 0;
+  }
+
+  .logo-flower {
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  .logo-text .name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--amber);
+    display: block;
+    line-height: 1;
+  }
+
+  .logo-text .sub {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    color: var(--amber);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  .logo-link { display:flex; align-items:center; text-decoration:none; }
+  .logo-img { height:56px; width:auto; }
+  .footer-logo-link { display:inline-block; text-decoration:none; }
+  .footer-logo-img { height:70px; width:auto; }
+  .nav-links { display:flex; gap:30px; list-style:none; align-items:center; }
+  .nav-links a { font-size:16px; font-weight:600; color:var(--text-soft); text-decoration:none; transition:color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color:var(--amber); }
+  .nav-pill { background:var(--amber); color:white !important; padding:12px 28px; border-radius:50px; }
+
+  .page-hero { background:linear-gradient(160deg,var(--amber-pale),var(--amber-pale),var(--blush)); padding:70px 60px; position:relative; overflow:hidden; }
+  .page-hero::before { content:'🌺'; position:absolute; top:20px;right:40px; font-size:120px; opacity:0.1; }
+  .breadcrumb { font-size:14px; color:var(--text-soft); margin-bottom:16px; font-weight:600; }
+  .breadcrumb a { color:var(--amber); text-decoration:none; }
+  .page-hero h1 { font-family:'Cormorant Garamond',serif; font-size:56px; font-weight:600; line-height:1.15; margin-bottom:16px; }
+  .page-hero h1 em { color:var(--amber); font-style:italic; }
+  .page-hero p { font-size:20px; color:var(--text-soft); max-width:560px; }
+
+  /* CONTACT MAIN */
+  .contact-main { padding:80px 60px; background:white; }
+  .contact-grid { display:grid; grid-template-columns:1fr 1.6fr; gap:70px; max-width:1100px; margin:0 auto; align-items:start; }
+  .contact-info h2 { font-family:'Cormorant Garamond',serif; font-size:40px; font-weight:600; line-height:1.2; margin-bottom:16px; }
+  .contact-info h2 em { color:var(--amber); font-style:italic; }
+  .contact-info > p { font-size:18px; color:var(--text-soft); margin-bottom:32px; line-height:1.8; }
+
+  .contact-method { display:flex; align-items:flex-start; gap:16px; padding:18px 0; border-bottom:1px solid var(--border-soft); }
+  .contact-method:last-of-type { border-bottom:none; }
+  .method-icon-wrap { width:48px; height:48px; border-radius:50%; background:var(--amber-pale); display:flex; align-items:center; justify-content:center; font-size:22px; flex-shrink:0; }
+  .method-info strong { display:block; font-size:18px; font-weight:700; margin-bottom:3px; }
+  .method-info a { color:var(--amber); text-decoration:none; font-size:17px; font-weight:700; display:block; }
+  .method-info span { font-size:15px; color:var(--text-soft); }
+
+  /* FORM CARD */
+  .form-card { background:var(--ivory); border-radius:24px; padding:44px; border:1.5px solid var(--border-soft); box-shadow:0 12px 40px rgba(217,96,122,0.08); }
+  .form-card h3 { font-family:'Cormorant Garamond',serif; font-size:30px; font-weight:600; margin-bottom:6px; }
+  .form-card > p { font-size:16px; color:var(--text-soft); margin-bottom:28px; font-weight:600; }
+  .fc-field { margin-bottom:16px; }
+  .fc-field label { display:block; font-size:14px; font-weight:700; color:var(--text-soft); margin-bottom:7px; letter-spacing:0.04em; }
+  .fc-field input, .fc-field select, .fc-field textarea { width:100%; padding:14px 18px; border:2px solid var(--border-soft); border-radius:12px; font-family:'Nunito',sans-serif; font-size:16px; color:var(--text); background:white; outline:none; transition:border-color 0.2s; }
+  .fc-field input:focus, .fc-field select:focus, .fc-field textarea:focus { border-color:var(--amber); }
+  .fc-field textarea { min-height:120px; resize:vertical; }
+  .fc-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .btn-rose-block { background:var(--amber); color:white; border:none; padding:16px; font-family:'Nunito',sans-serif; font-size:18px; font-weight:700; cursor:pointer; width:100%; border-radius:50px; text-decoration:none; display:block; text-align:center; transition:background 0.2s; box-shadow:0 6px 20px rgba(217,96,122,0.25); margin-top:8px; }
+  .btn-rose-block:hover { background:#B84060; }
+
+  /* CENTRES */
+  .centres { padding:80px 60px; background:var(--blush); }
+  .centres h2 { font-family:'Cormorant Garamond',serif; font-size:44px; font-weight:600; text-align:center; margin-bottom:8px; }
+  .centres h2 em { color:var(--amber); font-style:italic; }
+  .centres-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; max-width:1100px; margin:56px auto 0; }
+  .centre-card { background:white; border-radius:20px; padding:28px 24px; border:1.5px solid var(--border-soft); transition:transform 0.25s; }
+  .centre-card:hover { transform:translateY(-4px); box-shadow:0 12px 28px rgba(217,96,122,0.1); }
+  .centre-icon { font-size:30px; margin-bottom:12px; }
+  .centre-city { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:600; color:var(--amber); margin-bottom:6px; }
+  .centre-address { font-size:15px; color:var(--text-soft); line-height:1.65; margin-bottom:10px; font-weight:600; }
+  .centre-phone { font-size:16px; color:var(--text); font-weight:700; }
+  .centre-hours { font-size:13px; color:var(--amber); font-weight:700; margin-top:4px; }
+
+  /* FAQ */
+  .faq { padding:80px 60px; background:white; }
+  .faq h2 { font-family:'Cormorant Garamond',serif; font-size:44px; font-weight:600; text-align:center; margin-bottom:8px; }
+  .faq h2 em { color:var(--amber); font-style:italic; }
+  .faq-items { max-width:800px; margin:56px auto 0; }
+  .faq-item { background:var(--ivory); border-radius:16px; padding:24px 28px; margin-bottom:14px; border:1.5px solid var(--border-soft); }
+  .faq-q { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; color:var(--text); margin-bottom:10px; }
+  .faq-a { font-size:17px; color:var(--text-soft); line-height:1.8; }
+
+  /* CTA */
+  .cta-banner { background:linear-gradient(135deg,var(--amber),var(--amber-light)); padding:80px 60px; text-align:center; }
+  .cta-banner h2 { font-family:'Cormorant Garamond',serif; font-size:48px; font-weight:600; color:white; margin-bottom:14px; }
+  .cta-banner p { font-size:20px; color:rgba(255,255,255,0.88); margin-bottom:32px; max-width:520px; margin-left:auto; margin-right:auto; }
+  .btn-white-pill { background:white; color:var(--amber); padding:18px 48px; border-radius:50px; font-size:19px; font-weight:700; text-decoration:none; display:inline-block; font-family:'Nunito',sans-serif; transition:all 0.25s; }
+  .btn-white-pill:hover { transform:translateY(-3px); }
+
+  footer { background:#3A1A10; padding:60px 60px 28px; color:#C8A090; }
+  .footer-top { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; margin-bottom:36px; padding-bottom:36px; border-bottom:1px solid #5A3028; }
+  .footer-brand-name { font-family:'Cormorant Garamond',serif; font-size:28px; color:#FFF3D6; font-weight:600; margin-bottom:12px; }
+  .footer-col-title { font-size:15px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#FFF3D6; margin-bottom:16px; }
+  .footer-col ul { list-style:none; }
+  .footer-col ul li { margin-bottom:10px; }
+  .footer-col ul li a { color:#A07868; text-decoration:none; font-size:16px; }
+  .footer-col ul li a:hover { color:#FFF3D6; }
+  .footer-bottom { text-align:center; font-size:14px; color:#6A4838; }
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo-wrap">
+    <div class="logo-img"><img src='../TrueLink Logo.png' height="56px"></div>
+    <span class="name logo-link"><img src='../TrueLink Name.png' height='56px'></span>
+    <div class="logo-text">
+      <span class="sub">Trusted · Compassionate · Timeless</span>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="mockup2-floral-garden.html">Home</a></li>
+    <li><a href="mockup2-about.html">About</a></li>
+    <li><a href="mockup2-services.html">Our Services</a></li>
+    <li><a href="mockup2-success-stories.html">Success Stories</a></li>
+    <li><a href="mockup2-contact.html" class="active">Contact</a></li>
+    <li><a href="mockup2-contact.html" class="nav-pill">Register Now</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="mockup2-floral-garden.html">Home</a> › Contact Us</div>
+  <h1>We're Here, and We're<br><em>Ready to Listen</em></h1>
+  <p>Reach us any way that's comfortable for you — phone, email, WhatsApp, or in person. A warm counsellor is always waiting.</p>
+</div>
+
+<section class="contact-main">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h2>Get in Touch<br>with <em>Our Team</em></h2>
+      <p>Whether you're just exploring or ready to begin — our counsellors will listen to you fully, with patience, warmth, and zero pressure.</p>
+      <div class="contact-method">
+        <div class="method-icon-wrap">📞</div>
+        <div class="method-info"><strong>Toll-Free Helpline</strong><a href="tel:+919591471691">+91 95914 71691</a><span>Monday–Saturday, 9am–8pm IST</span></div>
+      </div>
+      <div class="contact-method">
+        <div class="method-icon-wrap">✉️</div>
+        <div class="method-info"><strong>Email</strong><a href="mailto:truelinkmatrimony@gmail.com">truelinkmatrimony@gmail.com</a><span>We respond within 24 hours, always</span></div>
+      </div>
+      <div class="contact-method">
+        <div class="method-icon-wrap">💬</div>
+        <div class="method-info"><strong>WhatsApp</strong><a href="https://wa.me/919591471691">+91 95914 71691</a><span>Message us at any time</span></div>
+      </div>
+      <div class="contact-method">
+        <div class="method-icon-wrap">🏡</div>
+        <div class="method-info"><strong>Home Visit</strong><span>Request a counsellor at your home — available across all our service cities, at no extra cost.</span></div>
+      </div>
+    </div>
+    <div class="form-card">
+      <h3>Request a Free Consultation</h3>
+      <p>A counsellor will call you back within 24 hours — no obligation, just a warm conversation.</p>
+      <div class="fc-row">
+        <div class="fc-field"><label>Your Full Name</label><input type="text" placeholder="Your name"></div>
+        <div class="fc-field"><label>Phone Number</label><input type="tel" placeholder="+91 XXXXX XXXXX"></div>
+      </div>
+      <div class="fc-row">
+        <div class="fc-field"><label>Email Address</label><input type="email" placeholder="your@email.com"></div>
+        <div class="fc-field"><label>Your City</label><input type="text" placeholder="City"></div>
+      </div>
+      <div class="fc-row">
+        <div class="fc-field"><label>Registering For</label><select><option>Son</option><option>Daughter</option><option>Self</option><option>Other</option></select></div>
+        <div class="fc-field"><label>Best Time to Call</label><select><option>Morning (9–12)</option><option>Afternoon (12–4)</option><option>Evening (4–8)</option></select></div>
+      </div>
+      <div class="fc-field"><label>Preferred Consultation Mode</label><select><option>Phone Call</option><option>Office Visit</option><option>Home Visit</option><option>Video Call</option></select></div>
+      <div class="fc-field"><label>Anything You'd Like Us to Know</label><textarea placeholder="Share your background, traditions, preferences, or questions — we're here to listen..."></textarea></div>
+      <a href="#" class="btn-rose-block">Send My Request 🌸</a>
+    </div>
+  </div>
+</section>
+
+<!-- CENTRES -->
+<section class="centres">
+  <p style="font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);font-weight:700;text-align:center;margin-bottom:12px">Visit Us</p>
+  <h2>Our <em>Counselling Centres</em></h2>
+  <div class="centres-grid">
+    <div class="centre-card"><div class="centre-icon">🌺</div><div class="centre-city">Hyderabad</div><div class="centre-address">23 Banjara Hills Road No. 10,<br>Hyderabad – 500 034</div><div class="centre-phone">📞 040-2345-6789</div><div class="centre-hours">Mon–Sat 9am–8pm</div></div>
+    <div class="centre-card"><div class="centre-icon">🌸</div><div class="centre-city">Chennai</div><div class="centre-address">8 Nungambakkam High Rd,<br>Chennai – 600 034</div><div class="centre-phone">📞 044-3456-7890</div><div class="centre-hours">Mon–Sat 9am–8pm</div></div>
+    <div class="centre-card"><div class="centre-icon">🌷</div><div class="centre-city">Bangalore</div><div class="centre-address">56 Lavelle Road, 2nd Floor,<br>Bangalore – 560 001</div><div class="centre-phone">📞 080-4567-8901</div><div class="centre-hours">Mon–Sat 9am–7pm</div></div>
+    <div class="centre-card"><div class="centre-icon">🌺</div><div class="centre-city">Mumbai</div><div class="centre-address">14 Linking Rd, Bandra West,<br>Mumbai – 400 050</div><div class="centre-phone">📞 022-5678-9012</div><div class="centre-hours">Mon–Sat 10am–8pm</div></div>
+    <div class="centre-card"><div class="centre-icon">🌸</div><div class="centre-city">Kochi</div><div class="centre-address">9 Marine Drive,<br>Ernakulam, Kochi – 682 031</div><div class="centre-phone">📞 0484-678-9012</div><div class="centre-hours">Mon–Sat 9am–6pm</div></div>
+    <div class="centre-card"><div class="centre-icon">🌷</div><div class="centre-city">Coimbatore</div><div class="centre-address">31 Race Course Rd,<br>Coimbatore – 641 018</div><div class="centre-phone">📞 0422-789-0123</div><div class="centre-hours">Mon–Sat 9am–6pm</div></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <p style="font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);font-weight:700;text-align:center;margin-bottom:12px">Common Questions</p>
+  <h2>Your Questions, <em>Answered with Care</em></h2>
+  <div class="faq-items">
+    <div class="faq-item"><div class="faq-q">Is the consultation really free, with no obligation?</div><div class="faq-a">Absolutely. The first consultation is completely free. We want to understand your family and your hopes before you commit to anything. There is never any pressure.</div></div>
+    <div class="faq-item"><div class="faq-q">Can I register on behalf of a family member who is in another city?</div><div class="faq-a">Yes, definitely. Many registrations are made by parents or siblings. We work across cities and can connect your family member with a local counsellor in their area.</div></div>
+    <div class="faq-item"><div class="faq-q">How long before we hear back after submitting the form?</div><div class="faq-a">Always within 24 hours — typically much sooner. A counsellor will call you personally, not send an automated message.</div></div>
+    <div class="faq-item"><div class="faq-q">Do you support families looking for remarriage?</div><div class="faq-a">Yes — with the greatest care and sensitivity. Many of our most treasured success stories involve second marriages, and we approach each one with full dignity, understanding, and no judgement.</div></div>
+    <div class="faq-item"><div class="faq-q">Is a home visit truly available at no extra cost?</div><div class="faq-a">Yes, always. Home visits are a standard part of our service for families who prefer it — included in every package at no additional charge.</div></div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <h2>Begin Your Beautiful Journey Today</h2>
+  <p>Call us, message us, or simply fill in the form. We'll be there within 24 hours.</p>
+  <a href="#" class="btn-white-pill">Register Free 🌺</a>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div><a href="mockup2-floral-garden.html" class="footer-logo-link"><img src="../TrueLink.png" alt="True Link Vivah" class="footer-logo-img"></a><p style="color:#8A6858;font-size:16px;max-width:280px;line-height:1.75">Helping families find love and lifelong companionship — with deep respect for tradition and the human heart.</p></div>
+    <div class="footer-col"><div class="footer-col-title">Services</div><ul><li><a href="mockup2-services.html">Personal Matchmaking</a></li><li><a href="mockup2-services.html">Horoscope Matching</a></li><li><a href="mockup2-services.html">Family Counselling</a></li></ul></div>
+    <div class="footer-col"><div class="footer-col-title">Company</div><ul><li><a href="mockup2-about.html">About Us</a></li><li><a href="mockup2-success-stories.html">Success Stories</a></li></ul></div>
+    <div class="footer-col"><div class="footer-col-title">Contact</div><ul><li><a href="tel:+919591471691">+91 95914 71691</a></li><li><a href="mailto:truelinkmatrimony@gmail.com">truelinkmatrimony@gmail.com</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">© 2024 True Link Vivah. All rights reserved. | Privacy Policy | Terms</div>
+</footer>
+</body>
+</html>
